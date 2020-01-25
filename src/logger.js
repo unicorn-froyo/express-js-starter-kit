@@ -12,7 +12,7 @@ const myFormat = printf(
 );
 
 const getLogFileName = () => {
-  const logDir = process.env.LOG_DIR || __dirname;
+  const logDir = process.env.LOG_DIR || process.cwd();
   const logFileName = process.env.SERVICE_NAME || 'application';
   return path.join(logDir, `${logFileName}-%DATE%.log`);
 };
