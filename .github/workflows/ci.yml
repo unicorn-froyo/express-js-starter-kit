@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Express.js Starter Kit CI
 
 on: [push, pull_request]
 
