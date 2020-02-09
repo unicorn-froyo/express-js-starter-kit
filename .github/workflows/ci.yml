@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Express.js Starter Kit CI
 
 on: [push, pull_request]
 
@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [10.x, 12.x]
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
@@ -16,9 +16,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: npm install, build, lint and test
         run: |
-          npm ci
-          npm run build --if-present
-          npm run lint:ci
-          npm test
+          yarn
+          yarn lint:ci
+          yarn test
+          yarn build
         env:
           CI: true

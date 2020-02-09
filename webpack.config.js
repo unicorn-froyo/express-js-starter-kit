@@ -16,8 +16,8 @@ const nodeExternals = require('webpack-node-externals');
  */
 
 module.exports = {
-  mode: 'development',
-  entry: './index.js',
+  mode: 'production',
+  entry: './src/server.js',
 
   output: {
     filename: 'server.js',
